@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <title>Survey Form/freeCodeCamp</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1 id="title">Survey Form</h1>
-        <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus aperiam corporis et fugit accusamus alias atque saepe laudantium autem!</p>
-        <form action="" id="survey-form">
-            <label for="name" id="name-label">NAME:<input type="text" name="name" id="name" required placeholder="Enter your name"></label>
-            <label for="email" id="email-label">EMAIL<input type="email" name="emai;" id="email" required placeholder="Enter your email"></label>
-            <label for="number" id="number-label">Age<input type="password" name="number" id="number" max="100" min="18" placeholder="Enter your age" required></label>
-            <select name="" id="dropdown">
-                <option disabled selected value>Please select your sex</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Survey Form</h1>
+        <form id="survey-form">
+            <!-- Name field -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <!-- Age field -->
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <!-- Dropdown field -->
+            <div class="form-group">
+                <label for="dropdown">Select an option:</label>
+                <select id="dropdown" name="dropdown">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+            <!-- Radio buttons -->
+            <div class="form-group">
+                <p>Please select a gender:</p>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+            <!-- Textarea for additional comments -->
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <!-- Submit button -->
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
         </form>
-    </body>
+    </div>
+</body>
+
 </html>
